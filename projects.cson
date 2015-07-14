@@ -1,0 +1,22 @@
+"face-web":
+  title: "face-web"
+  paths: [
+    "/Users/bwong/projects/face-web"
+  ]
+"rails-site":
+  title: "rails-site"
+  paths: [
+    "/Users/bwong/projects/rails-site"
+  ]
+"Ember Studies":
+  title: "Ember Studies"
+  paths: [
+    "/Users/bwong/projects/borrowers"
+    "/Users/bwong/projects/bumbox"
+  ]
+"snagspot":
+  title: "snagspot"
+  paths: [
+    "/Users/bwong/projects/snagspot-api"
+    "/Users/bwong/projects/snagspot-web"
+  ]

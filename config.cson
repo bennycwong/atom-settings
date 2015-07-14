@@ -1,0 +1,24 @@
+"*":
+  "exception-reporting":
+    userId: "20d3e965-f06d-5d0b-3edf-176b6346d285"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "one-dark-ui"
+      "afterglow-monokai-syntax"
+    ]
+    disabledPackages: [
+      "atom-transpose"
+    ]
+    destroyEmptyPanes: false
+  editor:
+    invisibles: {}
+    fontFamily: "menlo"
+    showInvisibles: true
+    zoomFontWhenCtrlScrolling: true
+    fontSize: 12
+    lineHeight: 1.4
+  "file-icons": {}
+  "highlight-line": {}
+  minimap: {}
