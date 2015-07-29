@@ -1,7 +1,7 @@
 {
   "name": "afterglow-plus",
   "theme": "syntax",
-  "version": "1.3.5",
+  "version": "1.5.0",
   "description": "ST3 theme Afterglow with improved Angular JS coloring",
   "repository": {
     "type": "git",
@@ -17,10 +17,10 @@
     "url": "https://github.com/smlombardi/afterglow-plus/issues"
   },
   "homepage": "https://github.com/smlombardi/afterglow-plus",
-  "_id": "afterglow-plus@1.3.5",
-  "_shasum": "84848abd0975726658ffc7e83bcfc2e0cadb9e39",
-  "_resolved": "file:../d-11568-25189-yrivjx/package.tgz",
-  "_from": "../d-11568-25189-yrivjx/package.tgz",
+  "_id": "afterglow-plus@1.5.0",
+  "_shasum": "1770d96953ae9f04b6291e172d2cb3d99a2b1c8e",
+  "_resolved": "file:../d-115627-7819-4fuj23/package.tgz",
+  "_from": "../d-115627-7819-4fuj23/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],

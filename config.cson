@@ -10,6 +10,7 @@
     ]
     disabledPackages: [
       "atom-transpose"
+      "language-sass"
     ]
     destroyEmptyPanes: false
   editor:
@@ -17,8 +18,8 @@
     fontFamily: "menlo"
     showInvisibles: true
     zoomFontWhenCtrlScrolling: true
-    fontSize: 12
     lineHeight: 1.4
+    fontSize: 12
   "file-icons": {}
   "highlight-line": {}
   minimap: {}

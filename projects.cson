@@ -14,9 +14,19 @@
     "/Users/bwong/projects/borrowers"
     "/Users/bwong/projects/bumbox"
   ]
-"snagspot":
+snagspot:
   title: "snagspot"
   paths: [
     "/Users/bwong/projects/snagspot-api"
     "/Users/bwong/projects/snagspot-web"
+  ]
+"modern-utensils":
+  title: "modern-utensils"
+  paths: [
+    "/Users/bwong/projects/modern-utensils-s3-v2"
+  ]
+junglescout:
+  title: "junglescout"
+  paths: [
+    "/Users/bwong/Dropbox (Personal)/ASM/junglescout"
   ]
