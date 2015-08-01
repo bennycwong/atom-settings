@@ -10,7 +10,7 @@
     ]
     disabledPackages: [
       "atom-transpose"
-      "language-sass"
+      "Atom-Syntax-highlighting-for-Sass"
     ]
     destroyEmptyPanes: false
   editor:
@@ -23,3 +23,5 @@
   "file-icons": {}
   "highlight-line": {}
   minimap: {}
+  "vim-mode":
+    startInInsertMode: true
