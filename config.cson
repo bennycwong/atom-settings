@@ -25,3 +25,4 @@
   minimap: {}
   "vim-mode":
     startInInsertMode: true
+  "merge-conflicts": {}
