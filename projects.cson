@@ -14,11 +14,11 @@
     "/Users/bwong/projects/borrowers"
     "/Users/bwong/projects/bumbox"
   ]
-snagspot:
-  title: "snagspot"
+leadzonian:
+  title: "leadzonian"
   paths: [
-    "/Users/bwong/projects/snagspot-api"
-    "/Users/bwong/projects/snagspot-web"
+    "/Users/bwong/code/leadzonian/leadzonian-api"
+    "/Users/bwong/code/leadzonian/leadzonian-web"
   ]
 "modern-utensils":
   title: "modern-utensils"
@@ -29,4 +29,9 @@ junglescout:
   title: "junglescout"
   paths: [
     "/Users/bwong/Dropbox (Personal)/ASM/junglescout"
+  ]
+grandprix:
+  title: "grandprix"
+  paths: [
+    "/Users/bwong/code/grandprix"
   ]

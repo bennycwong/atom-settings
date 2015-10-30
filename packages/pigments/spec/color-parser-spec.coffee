@@ -34,15 +34,16 @@ describe 'ColorParser', ->
     withContext: (variables) ->
       vars = []
       colorVars = []
+      path = "/path/to/file.styl"
       for name,value of variables
         if value.indexOf('color:') isnt -1
           value = value.replace('color:', '')
-          vars.push {name, value}
-          colorVars.push {name, value}
+          vars.push {name, value, path}
+          colorVars.push {name, value, path}
 
         else
-          vars.push {name, value}
-      @context = new ColorContext(vars, colorVars)
+          vars.push {name, value, path}
+      @context = new ColorContext({variables: vars, colorVariables: colorVars})
       @description = "with variables context #{jasmine.pp variables} "
 
       return this
@@ -113,6 +114,7 @@ describe 'ColorParser', ->
   }).asColor(0, 128, 0, 0.5)
 
   itParses('hsl(200,50%,50%)').asColor(64, 149, 191)
+  itParses('hsl(200,50,50)').asColor(64, 149, 191)
   itParses('hsl($h,$s,$l,)').asUndefined()
   itParses('hsl($h,$s,$l)').asInvalid()
   itParses('hsl($h,0%,0%)').asInvalid()
@@ -126,6 +128,7 @@ describe 'ColorParser', ->
 
   itParses('hsla(200,50%,50%,0.5)').asColor(64, 149, 191, 0.5)
   itParses('hsla(200,50%,50%,.5)').asColor(64, 149, 191, 0.5)
+  itParses('hsla(200,50,50,.5)').asColor(64, 149, 191, 0.5)
   itParses('hsla(200,50%,50%,)').asUndefined()
   itParses('hsla($h,$s,$l,$a)').asInvalid()
   itParses('hsla($h,0%,0%,0)').asInvalid()
@@ -140,6 +143,8 @@ describe 'ColorParser', ->
   }).asColor(64, 149, 191, 0.5)
 
   itParses('hsv(200,50%,50%)').asColor(64, 106, 128)
+  itParses('hsb(200,50%,50%)').asColor(64, 106, 128)
+  itParses('hsb(200,50,50)').asColor(64, 106, 128)
   itParses('hsv($h,$s,$v,)').asUndefined()
   itParses('hsv($h,$s,$v)').asInvalid()
   itParses('hsv($h,0%,0%)').asInvalid()
@@ -152,6 +157,8 @@ describe 'ColorParser', ->
   }).asColor(64, 106, 128)
 
   itParses('hsva(200,50%,50%,0.5)').asColor(64, 106, 128, 0.5)
+  itParses('hsva(200,50,50,0.5)').asColor(64, 106, 128, 0.5)
+  itParses('hsba(200,50%,50%,0.5)').asColor(64, 106, 128, 0.5)
   itParses('hsva(200,50%,50%,.5)').asColor(64, 106, 128, 0.5)
   itParses('hsva(200,50%,50%,)').asUndefined()
   itParses('hsva($h,$s,$v,$a)').asInvalid()
@@ -166,6 +173,7 @@ describe 'ColorParser', ->
   }).asColor(64, 106, 128, 0.5)
 
   itParses('hwb(210,40%,40%)').asColor(102, 128, 153)
+  itParses('hwb(210,40,40)').asColor(102, 128, 153)
   itParses('hwb(210,40%,40%, 0.5)').asColor(102, 128, 153, 0.5)
   itParses('hwb($h,$w,$b,)').asUndefined()
   itParses('hwb($h,$w,$b)').asInvalid()
@@ -189,6 +197,7 @@ describe 'ColorParser', ->
   }).asColor(102, 128, 153, 0.5)
 
   itParses('gray(100%)').asColor(255, 255, 255)
+  itParses('gray(100)').asColor(255, 255, 255)
   itParses('gray(100%, 0.5)').asColor(255, 255, 255, 0.5)
   itParses('gray($c, $a,)').asUndefined()
   itParses('gray($c, $a)').asInvalid()
@@ -247,6 +256,8 @@ describe 'ColorParser', ->
   itParses('transparentize(cyan, 0.5)').asColor(0, 255, 255, 0.5)
   itParses('transparentize(cyan, .5)').asColor(0, 255, 255, 0.5)
   itParses('fadeout(cyan, 0.5)').asColor(0, 255, 255, 0.5)
+  itParses('fade-out(cyan, 0.5)').asColor(0, 255, 255, 0.5)
+  itParses('fade_out(cyan, 0.5)').asColor(0, 255, 255, 0.5)
   itParses('fadeout(cyan, .5)').asColor(0, 255, 255, 0.5)
   itParses('fadeout(cyan, @r)').asInvalid()
   itParses('fadeout($c, $r)').withContext({
@@ -268,6 +279,8 @@ describe 'ColorParser', ->
   itParses('opacify(0x7800FFFF, 0.5)').asColor(0, 255, 255, 1)
   itParses('opacify(0x7800FFFF, .5)').asColor(0, 255, 255, 1)
   itParses('fadein(0x7800FFFF, 0.5)').asColor(0, 255, 255, 1)
+  itParses('fade-in(0x7800FFFF, 0.5)').asColor(0, 255, 255, 1)
+  itParses('fade_in(0x7800FFFF, 0.5)').asColor(0, 255, 255, 1)
   itParses('fadein(0x7800FFFF, .5)').asColor(0, 255, 255, 1)
   itParses('fadein(0x7800FFFF, @r)').asInvalid()
   itParses('fadein($c, $r)').withContext({
@@ -675,3 +688,78 @@ describe 'ColorParser', ->
     'b': '80%'
   }).asColor(0x99,0x99,0xff)
   itParses('lightness(a, b)').asInvalid()
+
+  itParses('Color(255, 0, 0, 255)').asColor(255,0,0)
+  itParses('Color(r, g, b, a)').withContext({
+    'r': '255'
+    'g': '0'
+    'b': '0'
+    'a': '255'
+  }).asColor(255,0,0)
+  itParses('Color(r, g, b, a)').asInvalid()
+
+  describe 'elm-lang support', ->
+    itParses('rgba 255 0 0 1').asColor(255,0,0)
+    itParses('rgba r g b a').withContext({
+      'r': '255'
+      'g': '0'
+      'b': '0'
+      'a': '1'
+    }).asColor(255,0,0)
+    itParses('rgba r g b a').asInvalid()
+
+    itParses('rgb 255 0 0').asColor(255,0,0)
+    itParses('rgb r g b').withContext({
+      'r': '255'
+      'g': '0'
+      'b': '0'
+    }).asColor(255,0,0)
+    itParses('rgb r g b').asInvalid()
+
+    itParses('hsla (degrees 200) 50 50 0.5').asColor(64, 149, 191, 0.5)
+    itParses('hsla (degrees h) s l a').withContext({
+      'h': '200'
+      's': '50'
+      'l': '50'
+      'a': '0.5'
+    }).asColor(64, 149, 191, 0.5)
+    itParses('hsla (degrees h) s l a').asInvalid()
+
+    itParses('hsla 3.49 50 50 0.5').asColor(64, 149, 191, 0.5)
+    itParses('hsla h s l a').withContext({
+      'h': '3.49'
+      's': '50'
+      'l': '50'
+      'a': '0.5'
+    }).asColor(64, 149, 191, 0.5)
+    itParses('hsla h s l a').asInvalid()
+
+    itParses('hsl (degrees 200) 50 50').asColor(64, 149, 191)
+    itParses('hsl (degrees h) s l').withContext({
+      'h': '200'
+      's': '50'
+      'l': '50'
+    }).asColor(64, 149, 191)
+    itParses('hsl (degrees h) s l').asInvalid()
+
+    itParses('hsl 3.49 50 50').asColor(64, 149, 191)
+    itParses('hsl h s l').withContext({
+      'h': '3.49'
+      's': '50'
+      'l': '50'
+    }).asColor(64, 149, 191)
+    itParses('hsl h s l').asInvalid()
+
+    itParses('grayscale 1').asColor(0, 0, 0)
+    itParses('greyscale 0.5').asColor(127, 127, 127)
+    itParses('grayscale 0').asColor(255, 255, 255)
+    itParses('grayscale g').withContext({
+      'g': '0.5'
+    }).asColor(127, 127, 127)
+    itParses('grayscale g').asInvalid()
+
+    itParses('complement rgb 255 0 0').asColor('#00ffff')
+    itParses('complement base').withContext({
+      'base': asColor 'red'
+    }).asColor('#00ffff')
+    itParses('complement base').asInvalid()
