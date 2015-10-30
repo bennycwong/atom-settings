@@ -1,6 +1,6 @@
 {
   "name": "jshint",
-  "version": "1.8.1",
+  "version": "1.8.3",
   "description": "Validate JavaScript with JSHint. In realtime or on save. Supports JSX (React).",
   "license": "MIT",
   "repository": {
@@ -65,10 +65,10 @@
     "url": "https://github.com/sindresorhus/atom-jshint/issues"
   },
   "homepage": "https://github.com/sindresorhus/atom-jshint#readme",
-  "_id": "jshint@1.8.1",
-  "_shasum": "8bbe966e28bf4f84b9f6ebebeb75a4376cca756f",
-  "_resolved": "file:../d-115930-15478-236lux/package.tgz",
-  "_from": "../d-115930-15478-236lux/package.tgz",
+  "_id": "jshint@1.8.3",
+  "_shasum": "7cdf6bf5fa14aaa94f3d432329a0773c092bbd89",
+  "_resolved": "file:../d-115930-19393-1sna3bk/package.tgz",
+  "_from": "../d-115930-19393-1sna3bk/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
