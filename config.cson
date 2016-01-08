@@ -10,7 +10,7 @@
     ]
     disabledPackages: [
       "atom-transpose"
-      "Atom-Syntax-highlighting-for-Sass"
+      "iex"
     ]
     destroyEmptyPanes: false
   editor:
@@ -26,3 +26,8 @@
   "vim-mode":
     startInInsertMode: true
   "merge-conflicts": {}
+  "autocomplete-elixir":
+    erlangHome: "/usr/local/bin"
+    elixirPath: "/usr/local/bin"
+  iex:
+    colors: {}

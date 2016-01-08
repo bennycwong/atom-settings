@@ -2,6 +2,7 @@
   title: "face-web"
   paths: [
     "/Users/bwong/code/face-web"
+    "/Users/bwong/code/face-engine"
   ]
 "rails-site":
   title: "rails-site"
@@ -34,4 +35,19 @@ grandprix:
   title: "grandprix"
   paths: [
     "/Users/bwong/code/grandprix"
+  ]
+home:
+  title: "home"
+  paths: [
+    "/Users/bwong/code/home"
+  ]
+nanohabits:
+  title: "nanohabits"
+  paths: [
+    "/Users/bwong/code/nanohabits"
+  ]
+exercism:
+  title: "exercism"
+  paths: [
+    "/Users/bwong/exercism"
   ]
