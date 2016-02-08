@@ -1,33 +1,50 @@
 "*":
-  "exception-reporting":
-    userId: "20d3e965-f06d-5d0b-3edf-176b6346d285"
-  welcome:
-    showOnStartup: false
+  "autocomplete-elixir":
+    elixirPath: "/usr/local/bin"
+    erlangHome: "/usr/local/bin"
+  "base16-ocean-dark": {}
   core:
-    themes: [
-      "atom-material-ui"
-      "afterglow-monokai-syntax"
-    ]
+    audioBeep: false
+    closeEmptyWindows: false
     disabledPackages: [
       "atom-transpose"
-      "iex"
     ]
-    destroyEmptyPanes: false
+    projectHome: "~/code"
+    themes: [
+      "base-16-ocean-dark-ui-theme"
+      "base16-ocean-dark"
+    ]
   editor:
-    invisibles: {}
+    autoIndentOnPaste: false
     fontFamily: "menlo"
+    fontSize: 12
+    invisibles: {}
+    lineHeight: 1.4
+    preferredLineLength: 1000
+    scrollPastEnd: true
     showInvisibles: true
     zoomFontWhenCtrlScrolling: true
-    lineHeight: 1.4
-    fontSize: 12
+  emmet: {}
+  "exception-reporting":
+    userId: "20d3e965-f06d-5d0b-3edf-176b6346d285"
   "file-icons": {}
   "highlight-line": {}
-  minimap: {}
-  "vim-mode":
-    startInInsertMode: true
-  "merge-conflicts": {}
-  "autocomplete-elixir":
-    erlangHome: "/usr/local/bin"
-    elixirPath: "/usr/local/bin"
   iex:
     colors: {}
+  "merge-conflicts": {}
+  minimap: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode":
+    startInInsertMode: true
+  welcome:
+    showOnStartup: false
+".elixir.html.text":
+  editor:
+    preferredLineLength: 1000
+".elixir.source":
+  editor:
+    preferredLineLength: 1000
+".elixir.text":
+  editor:
+    preferredLineLength: 1000

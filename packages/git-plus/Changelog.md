@@ -1,5 +1,48 @@
 ## Changelog
 
+### 5.13.0
+- Add keyboard support for git log view (@aki77)[PR#389](https://github.com/akonwi/git-plus/pull/389)
+
+### 5.12.3
+- Fix [#387](https://github.com/akonwi/git-plus/issues/387)
+- Fix [#383](https://github.com/akonwi/git-plus/issues/383)
+- Fix [#369](https://github.com/akonwi/git-plus/issues/369)
+
+### 5.12.1
+- Merge [pr #380](https://github.com/akonwi/git-plus/issues/380)
+- Merge [pr #381](https://github.com/akonwi/git-plus/issues/381)
+ - Fixes [#372](https://github.com/akonwi/git-plus/issues/372)
+- Fix [#377](https://github.com/akonwi/git-plus/issues/377)
+
+### 5.12.0
+- Add `Merge Remote` command (@crshd)
+- Fix [#370](https://github.com/akonwi/git-plus/issues/370)
+- Fix [#371](https://github.com/akonwi/git-plus/issues/371)
+- Remove code that 'fixed' [#90](https://github.com/akonwi/git-plus/issues/90) because there are still gaps to figure out
+
+### 5.11.0
+- Fix [#355](https://github.com/akonwi/git-plus/issues/355)
+- Fix [#354](https://github.com/akonwi/git-plus/issues/354)
+- Fix [#358](https://github.com/akonwi/git-plus/issues/358)
+
+### 5.9.0
+- Fix a bug where the commit amend file didn't show the status of the previous
+commit if there were no new changed files
+- Fix for a blank uncommented line inside the status of the amend file
+- Fix syntax error in the amend file. Changed 'removed' to 'deleted'
+
+### 5.8.3
+- Show errors from `Diff` command
+
+### 5.8.2
+- Fix for no notifications when changing branches
+
+### 5.8.1
+- Remove verbose commit feature because it isn't fully implemented
+
+### 5.8.0
+- Add setting for verbose commit panes
+
 ### 5.7.1
 - Fix #349 (@joshbaldock)
 
