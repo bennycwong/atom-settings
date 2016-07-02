@@ -1,4 +1,8 @@
 "*":
+  "atom-material-ui":
+    fonts: {}
+    tabs: {}
+    ui: {}
   "autocomplete-elixir":
     elixirPath: "/usr/local/bin"
     erlangHome: "/usr/local/bin"
@@ -8,37 +12,68 @@
     closeEmptyWindows: false
     disabledPackages: [
       "atom-transpose"
+      "pigments"
+    ]
+    packagesWithKeymapsDisabled: [
+      "standard-formatter"
     ]
     projectHome: "~/code"
     themes: [
       "base-16-ocean-dark-ui-theme"
-      "base16-ocean-dark"
+      "base16-ocean-dark-spacegray"
     ]
   editor:
-    autoIndentOnPaste: false
-    fontFamily: "menlo"
-    fontSize: 12
+    fontFamily: "Menlo, Consolas, 'DejaVu Sans Mono', monospace"
+    fontSize: 13
     invisibles: {}
     lineHeight: 1.4
     preferredLineLength: 1000
     scrollPastEnd: true
     showInvisibles: true
     zoomFontWhenCtrlScrolling: true
+  "elm-format":
+    formatOnSave: true
   emmet: {}
   "exception-reporting":
     userId: "20d3e965-f06d-5d0b-3edf-176b6346d285"
   "file-icons": {}
-  "highlight-line": {}
+  "git-plus": {}
+  "go-plus":
+    formatTool: "gofmt"
+    getMissingTools: false
+    goPath: "~/code/gocode"
+    lintOnSave: false
+    showPanel: false
+    vetOnSave: false
+  "highlight-line":
+    hideHighlightOnSelect: true
+    underline: "dotted"
   iex:
     colors: {}
+  linter:
+    showErrorPanel: false
+  "linter-js-standard":
+    checkStyleDevDependencies: true
+    honorStyleSettings: true
+    showEslintRules: true
+    style: "semi-standard"
   "merge-conflicts": {}
   minimap: {}
+  "run-command": {}
+  "standard-formatter":
+    formatOnSave: true
+    style: "semi-standard"
   "tree-view":
+    autoReveal: true
     hideVcsIgnoredFiles: true
+    showOnRightSide: true
   "vim-mode":
     startInInsertMode: true
   welcome:
     showOnStartup: false
+".diff.source":
+  editor:
+    preferredLineLength: 1000
 ".elixir.html.text":
   editor:
     preferredLineLength: 1000
@@ -46,5 +81,11 @@
   editor:
     preferredLineLength: 1000
 ".elixir.text":
+  editor:
+    preferredLineLength: 1000
+".haml.text":
+  editor:
+    preferredLineLength: 1000
+".hamlc.text":
   editor:
     preferredLineLength: 1000

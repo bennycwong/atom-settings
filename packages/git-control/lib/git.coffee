@@ -9,13 +9,7 @@ logcb = (log, error) ->
 
 repo = undefined
 cwd = undefined
-project = atom.project
-
-if project
-  repo = project.getRepositories()[0]
-  cwd = if repo then repo.getWorkingDirectory() #prevent startup errors if repo is undefined
-
-
+projectIndex = 0
 
 noop = -> q.fcall -> true
 
@@ -34,6 +28,16 @@ getBranches = -> q.fcall ->
     branches.remote.push h.replace('refs/remotes/', '')
 
   return branches
+
+setProjectIndex = (index) ->
+  repo = undefined
+  cwd = undefined
+  projectIndex = index
+  if atom.project
+    repo = atom.project.getRepositories()[index]
+    cwd = if repo then repo.getWorkingDirectory() #prevent startup errors if repo is undefined
+  return
+setProjectIndex(projectIndex)
 
 parseDiff = (data) -> q.fcall ->
   diffs = []
@@ -95,7 +99,7 @@ callGit = (cmd, parser, nodatalog) ->
       logcb e.stdout, true
       logcb e.message, true
       return
-
+      
 module.exports =
   isInitialised: ->
     return cwd
@@ -107,6 +111,14 @@ module.exports =
   setLogger: (cb) ->
     logcb = cb
     return
+
+  setProjectIndex: setProjectIndex
+
+  getProjectIndex: ->
+    return projectIndex
+
+  getRepository: ->
+    return repo
 
   count: (branch) ->
     return repo.getAheadBehindCount(branch)
@@ -176,6 +188,11 @@ module.exports =
       atomRefresh()
       return parseDefault(data)
 
+  pullup: ->
+    return callGit "pull upstream $(git branch | grep '^\*' | sed -n 's/\*[ ]*//p')", (data) ->
+      atomRefresh()
+      return parseDefault(data)
+
   pull: ->
     return callGit "pull", (data) ->
       atomRefresh()
@@ -188,7 +205,6 @@ module.exports =
 
   push: (remote,branch)->
     cmd = "-c push.default=simple push #{remote} #{branch} --porcelain"
-
     return callGit cmd, (data) ->
       atomRefresh()
       return parseDefault(data)

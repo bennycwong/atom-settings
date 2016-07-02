@@ -66,7 +66,7 @@ class ListView extends SelectListView
     @cancel()
 
   execute: (remote='', extraArgs='') ->
-    view = OutputViewManager.new()
+    view = OutputViewManager.create()
     args = [@mode]
     if extraArgs.length > 0
       args.push extraArgs
@@ -83,4 +83,7 @@ class ListView extends SelectListView
       git.cmd([@mode, '-u', remote, 'HEAD'], cwd: @repo.getWorkingDirectory())
       .then (message) ->
         view.addLine(message).finish()
+        startMessage.dismiss()
+      .catch (error) ->
+        view.addLine(error).finish()
         startMessage.dismiss()

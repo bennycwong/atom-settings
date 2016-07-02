@@ -35,3 +35,11 @@ atom-text-editor::shadow .cursor {
 .editor .wrap-guide {
   background: none;
 }
+
+//style highlights
+atom-text-editor::shadow .highlight.find-result .region {
+  border: orange 1px solid;
+}
+atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
+  background: orange; // to distinguish from the other results
+}

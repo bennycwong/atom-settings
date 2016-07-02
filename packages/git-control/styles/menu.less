@@ -10,6 +10,7 @@
     padding: 5px;
     cursor: pointer;
     border-radius: 4px;
+    -webkit-user-select: none;
 
     &:hover {
       color: @text-color-highlight;
@@ -18,6 +19,10 @@
     &.inactive, &.inactive:hover {
       color: @text-color-subtle;
       cursor: default;
+    }
+
+    &.hide {
+      display: none;
     }
 
     div {

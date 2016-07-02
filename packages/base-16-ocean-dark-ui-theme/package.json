@@ -1,7 +1,7 @@
 {
   "name": "base-16-ocean-dark-ui-theme",
   "theme": "ui",
-  "version": "1.5.5",
+  "version": "1.7.0",
   "description": "A dark UI theme based on base16 ocean dark",
   "repository": {
     "type": "git",
@@ -11,16 +11,16 @@
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
-  "readme": "# Base 16 Ocean Dark UI Theme\n\nThis is a UI theme for Atom based on the [Base 16](http://chriskempson.github.io/base16/) - Ocean Dark theme.\n\n![Preview](https://raw.githubusercontent.com/rm-code/base16-ocean-dark-ui/master/screenshots/screenshot.png)\n\nAdditional Features:\n\n- Custom tab styling for [Zen mode](https://atom.io/packages/zen)\n\n![tabs](https://raw.githubusercontent.com/rm-code/base16-ocean-dark-ui/master/screenshots/zen-tabs.png)\n\nRecommended syntax theme:\n\n- [Base 16 - Syntax theme](https://atom.io/themes/base16-ocean-dark-syntax-theme) by [anson0370](https://github.com/anson0370)\n\nRecommended plugins:\n\n- [Zen](https://atom.io/packages/zen)\n- [File-Icons](https://atom.io/packages/file-icons)\n- [Minimap](https://atom.io/packages/minimap)\n",
+  "readme": "# Base 16 Ocean Dark UI Theme\n\n[![Version](https://img.shields.io/badge/Version-0.1.6-blue.svg)](https://github.com/rm-code/base16-ocean-dark-ui/releases/latest) [![Atom](https://img.shields.io/badge/Atom-1.8.0--beta3-049158.svg)](https://atom.io/) [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE.md)\n\nThis is a UI theme for Atom based on the [Base 16](http://chriskempson.github.io/base16/) - Ocean Dark theme.\n\n![Preview](https://raw.githubusercontent.com/rm-code/base16-ocean-dark-ui/master/screenshots/screenshot.png)\n\nAdditional Features:\n\n- Custom tab styling for [Zen mode](https://atom.io/packages/zen)\n\n![tabs](https://raw.githubusercontent.com/rm-code/base16-ocean-dark-ui/master/screenshots/zen-tabs.png)\n\nRecommended syntax theme:\n\n- [Base 16 - Syntax theme](https://atom.io/themes/base16-ocean-dark-syntax-theme) by [anson0370](https://github.com/anson0370)\n\nRecommended plugins:\n\n- [Zen](https://atom.io/packages/zen)\n- [File-Icons](https://atom.io/packages/file-icons)\n- [Minimap](https://atom.io/packages/minimap)\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/rm-code/base16-ocean-dark-ui/issues"
   },
   "homepage": "https://github.com/rm-code/base16-ocean-dark-ui#readme",
-  "_id": "base-16-ocean-dark-ui-theme@1.5.5",
-  "_shasum": "03c8e26d7976b1f41f24fefd2c4ddd47bdc47780",
-  "_resolved": "file:../d-11618-26679-lyb8xk/package.tgz",
-  "_from": "../d-11618-26679-lyb8xk/package.tgz",
+  "_id": "base-16-ocean-dark-ui-theme@1.7.0",
+  "_shasum": "6b3cb028da76893eb6368b2266bfeb71edb086f5",
+  "_resolved": "file:../d-116530-75721-1ct4grx/package.tgz",
+  "_from": "../d-116530-75721-1ct4grx/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],

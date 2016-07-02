@@ -51,3 +51,18 @@ exercism:
   paths: [
     "/Users/bwong/exercism"
   ]
+bennycwongdotcom:
+  title: "bennycwongdotcom"
+  paths: [
+    "/Users/bwong/code/hugo/bennycwongdotcom"
+  ]
+go:
+  title: "go"
+  paths: [
+    "/Users/bwong/code/gocode"
+  ]
+cortex:
+  title: "cortex"
+  paths: [
+    "/Users/bwong/code/dsc/cortex"
+  ]

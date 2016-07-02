@@ -20,30 +20,14 @@ This is a first-release, while tested as part of creating this package, it has n
 - Command available are activated based on working tree status
 - Automatically fetches remote status on activation
 
-##GitFlow
+## GitFlow
 
-For git-flow commands to work, you need to [install git flow](https://github.com/petervanderdoes/gitflow/wiki)
+For git-flow commands to work, you need to [install git flow](https://github.com/petervanderdoes/gitflow-avh/wiki)
 
 then, on mac, do the following:
 
 ```
-  sudo ln -s /usr/local/bin/git-flow /usr/bin/
-
-  sudo ln -s /usr/local/bin/git-flow-hotfix /usr/bin/
-
-  sudo ln -s /usr/local/bin/git-flow-release /usr/bin/
-
-  sudo ln -s /usr/local/bin/git-flow-version /usr/bin/
-
-  sudo ln -s /usr/local/bin/git-flow-support /usr/bin/
-
-  sudo ln -s /usr/local/bin/git-flow-init /usr/bin/
-
-  sudo ln -s /usr/local/bin/git-flow-feature /usr/bin/
-
-  sudo ln -s /usr/local/bin/gitflow-shFlags /usr/bin/
-
-  sudo ln -s /usr/local/bin/gitflow-common /usr/bin/
+  for file in `find /usr/local/bin -type f -iname git[-f]* -exec basename {} \;`; do sudo ln -s /usr/local/bin/$file /usr/bin/$file; done
 ```
 
 ## Where
