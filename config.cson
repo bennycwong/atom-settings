@@ -12,7 +12,8 @@
     closeEmptyWindows: false
     disabledPackages: [
       "atom-transpose"
-      "pigments"
+      "vim-mode"
+      "hidpi"
     ]
     packagesWithKeymapsDisabled: [
       "standard-formatter"
@@ -26,7 +27,6 @@
     fontFamily: "Menlo, Consolas, 'DejaVu Sans Mono', monospace"
     fontSize: 13
     invisibles: {}
-    lineHeight: 1.4
     preferredLineLength: 1000
     scrollPastEnd: true
     showInvisibles: true
@@ -45,6 +45,10 @@
     lintOnSave: false
     showPanel: false
     vetOnSave: false
+  hidpi:
+    cutoffHeight: 1440
+    cutoffWidth: 2560
+    osScaleFactor: 2
   "highlight-line":
     hideHighlightOnSelect: true
     underline: "dotted"

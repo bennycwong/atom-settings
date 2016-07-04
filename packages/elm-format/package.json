@@ -1,7 +1,7 @@
 {
   "name": "elm-format",
   "main": "./lib/elm-format",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "scripts": {
     "lint": "eslint .",
     "watch": "ucompiler watch",
@@ -29,22 +29,23 @@
   "devDependencies": {
     "babel-eslint": "^6.0.2",
     "babel-preset-steelbrain": "^2.0.1",
-    "eslint": "^2.2.0",
-    "eslint-config-airbnb": "^7.0.0",
+    "eslint": "^3.0.0",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.10.0",
     "pre-commit": "^1.1.2",
     "ucompiler": "^3.1.8",
     "ucompiler-plugin-babel": "^3.1.1"
   },
-  "readme": "# elm-format\n\nRuns `elm-format` on save if you enable it\n\nGet `elm-format` at https://github.com/avh4/elm-format\n\n*Format on save* is disabled as default, so just activate it.\n",
+  "readme": "# elm-format\n\nRuns `elm-format` on save or manually\n\nGet `elm-format` at https://github.com/avh4/elm-format\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/triforkse/atom-elm-format/issues"
   },
   "homepage": "https://github.com/triforkse/atom-elm-format#readme",
-  "_id": "elm-format@1.2.1",
-  "_shasum": "5d185339e07f4716f28a5809fa9a6956ebb430ba",
-  "_resolved": "file:../d-11661-92463-1xf7taw/package.tgz",
-  "_from": "../d-11661-92463-1xf7taw/package.tgz",
+  "_id": "elm-format@2.0.0",
+  "_shasum": "54db1db6d91c7911bcc7ff1d3bcc4d7d8070833e",
+  "_resolved": "file:../d-11662-18282-cfvpwk/package.tgz",
+  "_from": "../d-11662-18282-cfvpwk/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
